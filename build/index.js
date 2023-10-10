@@ -1,23 +1,8 @@
 "use strict";
-const bot1 = {
-    id: 1,
-    name: 'optimus prime'
-};
-const bot2 = {
-    id: 1,
-    name: 'optimus prime',
-    sayHello: function () {
-        throw new Error("Function not implemented.");
-    }
-};
-class Pessoa {
-    constructor(id, name) {
-        this.id = id;
-        this.name = name;
-    }
-    sayHello() {
-        return `Hello i'm ${this.name}`;
-    }
+function concatArray(...itens) {
+    return new Array().concat(...itens);
 }
-const p = new Pessoa(1, 'Luis');
-console.log(p.sayHello());
+const numArray = concatArray([1, 5], [8], [2, 4, 9]);
+const stgArray = concatArray(['Felipe', 'goku'], ['Luis']);
+console.log(numArray);
+console.log(stgArray);
